@@ -1,4 +1,4 @@
-//Use 2 loops to find the maximum subarray sum of given subarray(O(n^2))
+//Uses only 1 loop and has (O(n)) time complexity
 #include<iostream>
 #include<vector>
 using namespace std;
@@ -14,15 +14,14 @@ int main(){
         cin>>x;
         array.push_back(x);
     }
-    //logic below
+    //logic
+    int sum=0;
     int maximum=INT_MIN;
-    for(int i=0;i<size;i++){
-     int sum=0;
-     for(int j=i;j<size;j++){
-        sum+=array[j];
+    for(int i:array){
+        sum+=i;
         maximum=max(sum,maximum);
-     }
+        if(sum<0)sum=0;
     }
-    cout<<"Maximum subarray sum= "<<maximum;
+    cout<<"Maximum subarray sum using Kadane's Algorithm: "<<maximum;
     return 0;
 }
