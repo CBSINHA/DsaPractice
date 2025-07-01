@@ -14,7 +14,7 @@ int main(){
         cin>>x;
         array.push_back(x);
     }
-    //logic: Xor (^) all the numbers 
+    //logic(O(n)): Xor (^) all the numbers 
     /*      A   B   Out
             0   0   0
             0   1   1
