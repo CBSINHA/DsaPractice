@@ -14,7 +14,9 @@ int main(){
         cin>>x;
         array.push_back(x);
     }
-    //logic
+    //logic:
+    // sum stores the current subarray sum and if sum<0 which means that we have to discard that subarray coz anything + <0 will decrease its value
+    //maximum ofc stores the max subarray sum acquired till now
     int sum=0;
     int maximum=INT_MIN;
     for(int i:array){
